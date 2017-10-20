@@ -27,22 +27,38 @@ $ yarn add @meltwater/examplr
 
 ## Usage
 
-<!--- TODO: Update usage example for added module(s). -->
-
-**See the complete [API documentation](./docs) and [working examples](./examples).**
-
-This package provides an async function which checks if its argument is true.
+This package provides a way to run examples for a package.
 
 ```js
-import isTrue from '@meltwater/examplr'
+import path from 'path'
 
-const logTrue = async () => {
-  const trueValue = await isTrue(true)
-  console.log(trueValue)
+import createExamples from '@meltwater/examplr'
+
+const adventureTime = (friends = 'Beemo') => `Fin, Jake, and ${friends}.`
+
+export const examples = {
+  adventureTime
 }
 
-logTrue().catch(err => { console.log(err) })
-// true
+const envVars = [
+  'LOG_LEVEL'
+]
+
+const defaultOptions = {
+  logLevel: 'debug'
+}
+
+const { runExample } = createExamples({
+  examples,
+  envVars,
+  defaultOptions
+})
+
+if (require.main === module) {
+  runExample({
+    local: path.resolve(__dirname, 'local.json')
+  })
+}
 ```
 
 ## Development Quickstart
@@ -145,16 +161,6 @@ create and push a tagged commit,
 and trigger CircleCI to publish the new version to npm.
 
 [npm version]: https://docs.npmjs.com/cli/version
-
-#### Examples
-
-**See the [full documentation on using examples](./examples).**
-
-View all examples with
-
-```
-$ yarn run example
-```
 
 #### Linting
 
