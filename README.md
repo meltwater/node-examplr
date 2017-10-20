@@ -36,22 +36,10 @@ import createExamples from '@meltwater/examplr'
 
 const adventureTime = (friends = 'Beemo') => `Fin, Jake, and ${friends}.`
 
-export const examples = {
-  adventureTime
-}
-
-const envVars = [
-  'LOG_LEVEL'
-]
-
-const defaultOptions = {
-  logLevel: 'debug'
-}
-
 const { runExample } = createExamples({
-  examples,
-  envVars,
-  defaultOptions
+  examples: {adventureTime},
+  envVars: ['LOG_LEVEL'],
+  defaultOptions: {logLevel: 'debug'}
 })
 
 if (require.main === module) {
