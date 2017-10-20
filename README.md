@@ -2,8 +2,6 @@
 
 [![npm](https://img.shields.io/badge/npm-%40meltwater%2Fexamplr-blue.svg)](https://www.npmjs.com/package/@meltwater/examplr)
 [![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/node-examplr)
-[![docs](https://img.shields.io/badge/docs-master-green.svg)](https://github.com/meltwater/node-examplr/tree/master/docs)
-[![Codecov](https://img.shields.io/codecov/c/token//github/meltwater/node-examplr.svg)](https://codecov.io/gh/meltwater/node-examplr)
 [![CircleCI](https://circleci.com/gh/meltwater/node-examplr.svg?style=shield&circle-token=0d67b78318512a8658c718614e1ff492ca4a4576)](https://circleci.com/gh/meltwater/node-examplr)
 
 ## Description
@@ -114,7 +112,6 @@ The following environment variables must be set on [CircleCI]:
 - `NPM_TOKEN`: npm token for installing and publishing packages.
 - `NPM_TEAM`: npm team to grant read-only package access
   (format `org:team`, optional).
-- `CODECOV_TOKEN`: Codecov token for uploading coverage reports (optional).
 
 These may be set manually or by running the script `./circleci/envvars.sh`.
 
@@ -190,7 +187,7 @@ $ yarn run format
 #### Tests
 
 Unit and integration testing is handled by [AVA]
-and coverage is reported by [Istanbul] and uploaded to [Codecov].
+and coverage is reported by [Istanbul].
 
 - Test files end in `.spec.js`.
 - Unit tests are placed under `lib` alongside the tested module.
@@ -227,7 +224,6 @@ $ yarn run ava:inspect:watch lib/true.spec.js
 ```
 
 [AVA]: https://github.com/avajs/ava
-[Codecov]: https://codecov.io/
 [Istanbul]: https://istanbul.js.org/
 
 ## Contributing

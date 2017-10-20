@@ -33,17 +33,12 @@
     "prebuild": "yarn run clean",
     "build:index": "babel --source-maps --out-dir ./dist ./index.js",
     "build:lib": "babel --source-maps --ignore='*.spec.js' --out-dir ./dist/lib ./lib",
-    "build:examples": "babel --source-maps --out-dir ./dist/examples ./examples",
     "dist": "yarn run build",
     "predist": "yarn test",
     "package": "npm pack",
     "prepackage": "yarn run build",
     "preversion": "yarn run dist",
     "postversion": "git push && git push --tags",
-    "example": "babel-node examples",
-    "example:watch": "babel-watch --watch examples/local.json examples",
-    "example:inspect": "babel-node --inspect examples",
-    "example:inspect:watch": "nodemon ./node_modules/.bin/babel-node --inspect examples",
     "ava:inspect": "node --inspect node_modules/ava/profile",
     "ava:inspect:watch": "nodemon --inspect node_modules/ava/profile",
     "watch": "gulp watch",
@@ -95,8 +90,7 @@
   },
   "dependencies": {
     "bunyan": "^1.8.12",
-    "change-case": "^3.0.1",
-    "util.promisify": "^1.0.0"
+    "change-case": "^3.0.1"
   },
   "devDependencies": {
     "ava": "^0.22.0",
@@ -116,7 +110,6 @@
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.0",
     "nyc": "^11.0.2",
-    "source-map-support": "^0.5.0",
     "standard": "^10.0.2"
   }
 }
