@@ -1,16 +1,16 @@
 {
-  "name": "@meltwater/makenew-node-lib",
-  "version": "2.3.11",
-  "description": "npm package skeleton for Meltwater Node.js libraries.",
+  "name": "@meltwater/examplr",
+  "version": "0.0.0",
+  "description": "Example runner for node packages.",
   "main": "./dist/index.js",
   "module": "./index.js",
   "keywords": [
     "meltwater",
     "node"
   ],
-  "homepage": "https://github.com/meltwater/makenew-node-lib",
-  "bugs": "https://github.com/meltwater/makenew-node-lib/issues",
-  "repository": "meltwater/makenew-node-lib",
+  "homepage": "https://github.com/meltwater/node-examplr",
+  "bugs": "https://github.com/meltwater/node-examplr/issues",
+  "repository": "meltwater/node-examplr",
   "license": "SEE LICENSE IN LICENSE.txt",
   "author": {
     "name": "Evan Sosenko",
