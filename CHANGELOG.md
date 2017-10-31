@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- (**Breaking**) Use [bunyan-formatter] to format log output.
+  Control output mode with new `logOutputMode` option.
+
 ### Changed
 
 - Update to [makenew-node-lib] v3.1.2.
@@ -16,5 +21,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Initial release.
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
+[bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 
 [Unreleased]: https://github.com/meltwater/node-examplr/compare/v1.0.0...HEAD

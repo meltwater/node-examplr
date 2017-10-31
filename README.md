@@ -38,8 +38,8 @@ const adventureTime = (friends = 'Beemo') => `Fin, Jake, and ${friends}.`
 
 const { runExample } = createExamples({
   examples: {adventureTime},
-  envVars: ['LOG_LEVEL'],
-  defaultOptions: {logLevel: 'debug'}
+  envVars: ['LOG_LEVEL', 'LOG_OUTPUT_MODE'],
+  defaultOptions: {logLevel: 'info', logOutputMode: 'short'}
 })
 
 if (require.main === module) {
@@ -48,6 +48,13 @@ if (require.main === module) {
   })
 }
 ```
+
+The `logLevel` may be any supported [Bunyan level][Bunyan Levels]
+and `logOutputMode` may be any mode supported by [bunyan-formatter]
+(`short`, `long`, `simple`, `json`, or `bunyan`).
+
+[Bunyan Levels]: https://github.com/trentm/node-bunyan#levels
+[bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 
 ## Development Quickstart
 
