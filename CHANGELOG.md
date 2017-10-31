@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [2.0.0] / 2017-10-31
 
 ### Added
 
@@ -23,4 +23,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 
-[Unreleased]: https://github.com/meltwater/node-examplr/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/meltwater/node-examplr/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/meltwater/node-examplr/compare/v1.0.0...v2.0.0
