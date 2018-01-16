@@ -1,6 +1,6 @@
 {
   "name": "@meltwater/examplr",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Example runner for node packages.",
   "main": "dist/index.js",
   "module": "index.js",
