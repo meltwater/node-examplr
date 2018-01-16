@@ -61,7 +61,8 @@
   "ava": {
     "files": [
       "**/*.spec.js",
-      "!dist/**/*"
+      "!dist/**/*",
+      "!package/**/*"
     ],
     "require": [
       "babel-register"
@@ -75,6 +76,7 @@
     "exclude": [
       "**/index.js",
       "dist/**/*.js",
+      "package/**/*.js",
       "examples/**/*.js",
       "**/*.spec.js"
     ],
@@ -93,19 +95,19 @@
     "change-case": "^3.0.1"
   },
   "devDependencies": {
-    "ava": "^0.23.0",
+    "ava": "^0.24.0",
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.1.4",
     "babel-watch": "^2.0.7",
     "del-cli": "^1.0.0",
     "gulp": "^3.9.1",
-    "gulp-cli": "^1.2.2",
+    "gulp-cli": "^2.0.0",
     "gulp-jsonlint": "^1.1.2",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-standard": "^10.0.0",
-    "gulp-watch": "^4.3.10",
+    "gulp-watch": "^5.0.0",
     "gulplog": "^1.0.0",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.1.2",
