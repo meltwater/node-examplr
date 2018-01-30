@@ -6,7 +6,47 @@
 
 ## Description
 
-Example runner for node packages.
+Example runner for node packages:
+because all packages should have an `examples` folder.
+
+Run async examples from the command line
+with structured logging, custom arguments,
+and options loaded from the environment or a config file.
+
+```js
+import path from 'path'
+
+import createExamples from '@meltwater/examplr'
+
+const adventureTime = ({
+  friends,
+  log
+}) => (me = 'Fin') => (
+  `${me}, Jake, and ${friends}.`
+)
+
+const { runExample } = createExamples({
+  examples: {adventureTime},
+  envVars: ['FRIENDS', 'LOG_LEVEL', 'LOG_OUTPUT_MODE'],
+  defaultOptions: {
+    logLevel: 'info',
+    logOutputMode: 'pretty',
+    friends: 'Lumpy Space Princess'
+  }
+})
+
+if (require.main === module) {
+  runExample({
+    local: path.resolve(__dirname, 'local.json')
+  })
+}
+```
+
+This can now be run with custom arguments with
+
+```
+$ node ./examples.js adventure-time Snail
+```
 
 ## Installation
 
@@ -27,34 +67,66 @@ $ yarn add @meltwater/examplr
 
 ## Usage
 
-This package provides a way to run examples for a package.
+#### `createExamples({examples, envVars, defaultOptions, createLogger})`
 
-```js
-import path from 'path'
+Takes a single options argument with the following parameters
+and returns the object `{runExample}`.
+All options are optional.
 
-import createExamples from '@meltwater/examplr'
+- `examples`: Object of examples to register.
+- `envVars`: Array of environment variables to read into options.
+- `defaultOptions`: Object of default options to pass to examples.
+- `createLogger`: Custom function use for creating the logger.
 
-const adventureTime = (friends = 'Beemo') => `Fin, Jake, and ${friends}.`
+#### `runExample({local})`
 
-const { runExample } = createExamples({
-  examples: {adventureTime},
-  envVars: ['LOG_LEVEL', 'LOG_OUTPUT_MODE'],
-  defaultOptions: {logLevel: 'info', logOutputMode: 'short'}
-})
+Run the example with the provided command line arguments.
+Gets the name of the example to run as the first CLI argument
+and passes the rest to the example.
+If no example is given, lists available examples.
 
-if (require.main === module) {
-  runExample({
-    local: path.resolve(__dirname, 'local.json')
-  })
-}
-```
+The optional `local` option is the path to a config file
+to read for example options (if it exists).
 
-The `logLevel` may be any supported [Bunyan level][Bunyan Levels]
-and `logOutputMode` may be any mode supported by [bunyan-formatter]
-(`short`, `long`, `simple`, `json`, or `bunyan`).
+### Example functions
 
-[Bunyan Levels]: https://github.com/trentm/node-bunyan#levels
-[bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
+- Examples are higher order functions which take an options object and
+  return either a synchronous function, an async function,
+  or a function which returns a promise.
+- The returned function will be called with any command line arguments.
+- The return value or resolution value will be logged under `data`.
+- If an error is thrown or the promise is rejected,
+  the error will be logged under `err`.
+- The **process will exit** after the function returns or throws,
+  or the promise resolves or rejects.
+    - To use callback style modules wrap them in a promise.
+    - To run background processes, return a promise that does not resolve.
+
+### Example options
+
+All examples are passed a single argument containing the logger and all options.
+This argument will always at least contain the logger as the `log` property.
+
+- Available options are defined by listing the corresponding
+  environment variables in `envVars`.
+- Each environment variable name will be converted to camelcase and
+  added with its value to the options object.
+- The optional `local` option in `runExample` points to a JSON file
+  to read and merge with the options (if this file exists).
+- The `defaultOptions` are used to set default values for any undefined options.
+- The option priority follows:
+  environment variables override local JSON values override defaults.
+
+### Logger
+
+The logger is a [Pino] logger.
+
+The options `LOG_LEVEL` and `LOG_OUTPUT_MODE` are built in,
+but must be enabled by adding them to the `envVars` array.
+If enabled, `logLevel` may be any supported Pino level,
+and `logOutputMode` may be either `json` or `pretty` (the default).
+
+[Pino]: https://github.com/pinojs/pino
 
 ## Development Quickstart
 
