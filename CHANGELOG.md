@@ -11,12 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Replace Bunyan with [Pino]
   (non-breaking, but significant enough for a major version bump).
-- `logOutputMode` choices are now `json` or `pretty`.
+- The `logOutputMode` choices are now `json` or `pretty`.
 
 ### Added
 
-- Add `logSerializers` option to pass additional log serializers.
-- Add `logFilter` and `logFilters` options to support log filtering.
+- New `logSerializers` option to pass additional log serializers.
+- New `logFilter` and `logFilters` options to support log filtering.
 
 ## [3.1.0] / 2018-01-15
 
