@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Update to [makenew-node-lib] v4.3.0
+- Update to [makenew-node-lib] v4.3.0.
 
 ## [4.0.1] / 2018-01-30
 
