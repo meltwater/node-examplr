@@ -76,8 +76,9 @@ All options are optional.
 - `examples`: Object of examples to register.
 - `envVars`: Array of environment variables to read into options.
 - `defaultOptions`: Object of default options to pass to examples.
-- `createLogger`: Custom function use for creating the logger.
 - `logSerializers`: Log `serializers` to pass to `createLogger`.
+- `logFilters`: Object of named log filters (available via `logFilter`).
+- `createLogger`: Custom function to use for creating the logger.
 
 #### `runExample({local})`
 
@@ -122,10 +123,15 @@ This argument will always at least contain the logger as the `log` property.
 
 The logger is a [Pino] logger.
 
-The options `LOG_LEVEL` and `LOG_OUTPUT_MODE` are built in,
-but must be enabled by adding them to the `envVars` array.
-If enabled, `logLevel` may be any supported Pino level,
-and `logOutputMode` may be either `json` or `pretty` (the default).
+- Any custom `serializers` are used in addition to the custom serializers.
+- Each filter in `logFilters` should be a function that takes the
+  JSON log document and returns true if the log should be printed
+  and false otherwise.
+- The options `LOG_LEVEL`, `LOG_OUTPUT_MODE` and `LOG_FILTER` are built in,
+  but must be enabled by adding them to the `envVars` array.
+  If enabled, `logLevel` may be any supported Pino level,
+  `logOutputMode` may be either `json` or `pretty` (the default),
+  and `logFilter` is a property name in `logFilters` (no filter by default).
 
 [Pino]: https://github.com/pinojs/pino
 
