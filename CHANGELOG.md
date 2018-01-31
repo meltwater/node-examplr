@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Replace Bunyan with [Pino]
   (non-breaking, but significant enough for a major version bump).
 - The `logOutputMode` choices are now `json` or `pretty`.
+- Update to [makenew-node-lib] v4.2.0.
 
 ### Added
 
