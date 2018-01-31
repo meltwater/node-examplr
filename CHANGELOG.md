@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - All [bunyan-formatter] modes now supported again.
+- Expose pino log arguments with `getPinoArgs`.
 
 ### Changed
 

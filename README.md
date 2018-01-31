@@ -136,6 +136,33 @@ The logger is a [Pino] logger.
   or any mode supported by [bunyan-formatter]:
   `short` (default), `long`, `simple`, or `bunyan`.
 
+---
+#### `getPinoArgs({outputMode, outputFilter, serializers, ...options})`
+
+**Only use this method in development.**
+
+This is a convenience method for users of this package who use
+Pino in development outside of their examples
+and want logging output formatted consistently.
+
+Returns the arguments (as an array) that are passed to the `pino`
+instantiation function, e.g.,
+
+```js
+import pino from 'pino'
+
+import { getPinoArgs } from '@meltwater/examplr'
+
+const args = getPinoArgs({
+  outputMode: 'short',
+  outputFilter: log => log.foo === 'bar',
+  serializers: {foo: x => x.toLowerCase()},
+  // addtional options are passed to pino
+})
+
+const log = pino(...args)
+```
+
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
