@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Add `logSerializers` option to pass additional log serializers.
+- Add `logFilter` and `logFilters` options to support log filtering.
 
 ## [3.1.0] / 2018-01-15
 
