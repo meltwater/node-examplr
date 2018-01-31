@@ -123,7 +123,7 @@ This argument will always at least contain the logger as the `log` property.
 
 The logger is a [Pino] logger.
 
-- Any custom `serializers` are used in addition to the custom serializers.
+- Any custom `serializers` are used in addition to the standard serializers.
 - Each filter in `logFilters` should be a function that takes the
   JSON log document and returns true if the log should be printed
   and false otherwise.
