@@ -77,6 +77,7 @@ All options are optional.
 - `envVars`: Array of environment variables to read into options.
 - `defaultOptions`: Object of default options to pass to examples.
 - `createLogger`: Custom function use for creating the logger.
+- `logSerializers`: Log `serializers` to pass to `createLogger`.
 
 #### `runExample({local})`
 
