@@ -90,6 +90,7 @@
     "node": ">=8.9.0"
   },
   "dependencies": {
+    "bunyan-formatter": "^1.0.0",
     "change-case": "^3.0.1",
     "pino": "^4.10.3"
   },

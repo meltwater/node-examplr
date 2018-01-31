@@ -30,7 +30,7 @@ const { runExample } = createExamples({
   envVars: ['FRIENDS', 'LOG_LEVEL', 'LOG_OUTPUT_MODE'],
   defaultOptions: {
     logLevel: 'info',
-    logOutputMode: 'pretty',
+    logOutputMode: 'short',
     friends: 'Lumpy Space Princess'
   }
 })
@@ -129,10 +129,14 @@ The logger is a [Pino] logger.
   and false otherwise.
 - The options `LOG_LEVEL`, `LOG_OUTPUT_MODE` and `LOG_FILTER` are built in,
   but must be enabled by adding them to the `envVars` array.
-  If enabled, `logLevel` may be any supported Pino level,
-  `logOutputMode` may be either `json` or `pretty` (the default),
-  and `logFilter` is a property name in `logFilters` (no filter by default).
+- The `logLevel` may be any supported Pino level.
+- The `logFilter` is a property name in `logFilters` (no filter by default).
+- The `logOutputMode` may be either `json` (unformatted),
+  `pretty` (the Pino pretty formatter),
+  or any mode supported by [bunyan-formatter]:
+  `short` (default), `long`, `simple`, or `bunyan`.
 
+[bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
 ## Development Quickstart
