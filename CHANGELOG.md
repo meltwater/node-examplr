@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.1] / 2018-01-31
+
+### Fixed
+
+- Log output mode was not defaulting to `short` in all cases.
+
 ## [4.1.0] / 2018-01-31
 
 ### Added
@@ -83,7 +89,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
-[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.1.1...HEAD
+[4.1.1]: https://github.com/meltwater/node-examplr/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/meltwater/node-examplr/compare/v4.0.2...v4.1.0
 [4.0.2]: https://github.com/meltwater/node-examplr/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/meltwater/node-examplr/compare/v4.0.0...v4.0.1
