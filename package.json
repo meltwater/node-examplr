@@ -94,7 +94,7 @@
   "dependencies": {
     "bunyan-formatter": "^1.0.0",
     "change-case": "^3.0.1",
-    "pino": "^4.10.3"
+    "pino": "^4.15.3"
   },
   "devDependencies": {
     "ava": "^0.25.0",
