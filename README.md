@@ -21,7 +21,7 @@ import createExamples from '@meltwater/examplr'
 const adventureTime = ({
   friends,
   log
-}) => (me = 'Fin') => (
+}) => (me = 'Finn') => (
   `${me}, Jake, and ${friends}.`
 )
 
@@ -275,6 +275,16 @@ and trigger CircleCI to publish the new version to npm.
   as the commit tagged with the new version number will not match after merging.
 
 [npm version]: https://docs.npmjs.com/cli/version
+
+#### Examples
+
+**See the [full documentation on using examples](./examples).**
+
+View all examples with
+
+```
+$ yarn run example
+```
 
 #### Linting
 
