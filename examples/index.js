@@ -1,5 +1,7 @@
 import path from 'path'
 
+// If using in a real project, replace the below import with
+// import createExamples from '@meltwater/examplr'
 import createExamples from '../lib'
 
 import adventure from './adventure'

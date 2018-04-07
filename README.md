@@ -7,45 +7,25 @@
 ## Description
 
 Example runner for node packages:
-because all packages should have an `examples` folder.
+because all packages should have an `examples` folder
+(including this one).
 
 Run async examples from the command line
 with structured logging, custom arguments,
 and options loaded from the environment or a config file.
 
-```js
-import path from 'path'
+### Try it out
 
-import createExamples from '@meltwater/examplr'
-
-const adventureTime = ({
-  friends,
-  log
-}) => (me = 'Finn') => (
-  `${me}, Jake, and ${friends}.`
-)
-
-const { runExample } = createExamples({
-  examples: {adventureTime},
-  envVars: ['FRIENDS', 'LOG_LEVEL', 'LOG_OUTPUT_MODE'],
-  defaultOptions: {
-    logLevel: 'info',
-    logOutputMode: 'short',
-    friends: 'Lumpy Space Princess'
-  }
-})
-
-if (require.main === module) {
-  runExample({
-    local: path.resolve(__dirname, 'local.json')
-  })
-}
-```
-
-This can now be run with custom arguments with
+Clone this and run the included example,
+then copy the `examples` folder into your own project
+to get started.
 
 ```
-$ node ./examples.js adventure-time Snail
+$ git clone git@github.com:meltwater/node-examplr.git
+$ cd node-examplr
+$ yarn
+$ yarn example adventure
+$ yarn example adventure Jake 10
 ```
 
 ## Installation
@@ -67,28 +47,61 @@ $ yarn add @meltwater/examplr
 
 ## Usage
 
-#### `createExamples({examples, envVars, defaultOptions, createLogger})`
+### Getting started
 
-Takes a single options argument with the following parameters
-and returns the object `{runExample}`.
-All options are optional.
+Create an entry point for examples,
 
-- `examples`: Object of examples to register.
-- `envVars`: Array of environment variables to read into options.
-- `defaultOptions`: Object of default options to pass to examples.
-- `logSerializers`: Log `serializers` to pass to `createLogger`.
-- `logFilters`: Object of named log filters (available via `logFilter`).
-- `createLogger`: Custom function to use for creating the logger.
+```js
+/* examples/index.js */
 
-#### `runExample({local})`
+import path from 'path'
 
-Run the example with the provided command line arguments.
-Gets the name of the example to run as the first CLI argument
-and passes the rest to the example.
-If no example is given, lists available examples.
+import createExamples from '@meltwater/examplr'
 
-The optional `local` option is the path to a config file
-to read for example options (if it exists).
+// Normally examples are imported from other files:
+// Add this one here for demonstration.
+const adventureTime = ({
+  friends,
+  log
+}) => (me = 'Finn') => {
+  log.info({friends}, 'Ready')
+  return `${me}, Jake, and ${friends}.`
+}
+
+const { runExample } = createExamples({
+  examples: {adventureTime},
+  envVars: ['FRIENDS', 'LOG_LEVEL', 'LOG_OUTPUT_MODE'],
+  defaultOptions: {
+    logLevel: 'info',
+    logOutputMode: 'short',
+    friends: 'Lumpy Space Princess'
+  }
+})
+
+if (require.main === module) {
+  runExample({
+    local: path.resolve(__dirname, 'local.json')
+  })
+}
+```
+
+This can now be run with custom arguments with
+
+```
+$ babel-node ./examples adventure-time Snail
+```
+
+Add any of the following to your project's npm scripts to enable
+running with `npm run example` or `yarn run example`, etc.,
+
+```json
+{
+  "example": "babel-node examples",
+  "example:watch": "babel-watch --watch examples/local.json examples",
+  "example:inspect": "babel-node --inspect examples",
+  "example:inspect:watch": "nodemon node_modules/.bin/babel-node --inspect examples",
+}
+```
 
 ### Example functions
 
@@ -135,6 +148,32 @@ The logger is a [Pino] logger.
   `pretty` (the Pino pretty formatter),
   or any mode supported by [bunyan-formatter]:
   `short` (default), `long`, `simple`, or `bunyan`.
+
+### API Reference
+
+#### `createExamples({examples, envVars, defaultOptions, createLogger})`
+
+Takes a single options argument with the following parameters
+and returns the object `{runExample}`.
+All options are optional.
+
+- `examples`: Object of examples to register.
+- `envVars`: Array of environment variables to read into options.
+- `defaultOptions`: Object of default options to pass to examples.
+- `logSerializers`: Log `serializers` to pass to `createLogger`.
+- `logFilters`: Object of named log filters (available via `logFilter`).
+- `createLogger`: Custom function to use for creating the logger.
+
+---
+#### `runExample({local})`
+
+Run the example with the provided command line arguments.
+Gets the name of the example to run as the first CLI argument
+and passes the rest to the example.
+If no example is given, lists available examples.
+
+The optional `local` option is the path to a config file
+to read for example options (if it exists).
 
 ---
 #### `getPinoArgs({outputMode, outputFilter, serializers, ...options})`
