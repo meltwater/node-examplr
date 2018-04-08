@@ -47,6 +47,9 @@ $ yarn add @meltwater/examplr
 
 ## Usage
 
+Refer to the [`examples` folder](./examples) for working examples
+and additional instructions you can copy directly into your project.
+
 ### Getting started
 
 Create an entry point for examples,
