@@ -17,7 +17,7 @@ and options loaded from the environment or a config file.
 ### Try it out
 
 Clone this and run the included example,
-then copy the `examples` folder into your own project
+then copy the [`examples` folder](./examples) into your own project
 to get started.
 
 ```
@@ -59,7 +59,7 @@ import path from 'path'
 import createExamples from '@meltwater/examplr'
 
 // Normally examples are imported from other files:
-// Add this one here for demonstration.
+// add this one here for demonstration.
 const adventureTime = ({
   friends,
   log
@@ -183,6 +183,10 @@ to read for example options (if it exists).
 This is a convenience method for users of this package who use
 Pino in development outside of their examples
 and want logging output formatted consistently.
+
+The Pino output stream will be directed though the selected
+formatter, thus logs will be pretty-printed
+without needing to pipe them though the Pino CLI.
 
 Returns the arguments (as an array) that are passed to the `pino`
 instantiation function, e.g.,
