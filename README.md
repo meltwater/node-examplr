@@ -25,7 +25,7 @@ $ git clone git@github.com:meltwater/node-examplr.git
 $ cd node-examplr
 $ yarn
 $ yarn example adventure
-$ yarn example adventure Jake 10
+$ yarn example adventure Jake 28
 ```
 
 ## Installation
