@@ -1,4 +1,4 @@
-# Node Example Runner
+# Examplr: Node.js Example Runner
 
 [![npm](https://img.shields.io/badge/npm-%40meltwater%2Fexamplr-blue.svg)](https://www.npmjs.com/package/@meltwater/examplr)
 [![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/node-examplr)
