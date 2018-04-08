@@ -1,8 +1,7 @@
 # Examplr: Node.js Example Runner
 
-[![npm](https://img.shields.io/badge/npm-%40meltwater%2Fexamplr-blue.svg)](https://www.npmjs.com/package/@meltwater/examplr)
-[![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/node-examplr)
-[![CircleCI](https://circleci.com/gh/meltwater/node-examplr.svg?style=shield&circle-token=0d67b78318512a8658c718614e1ff492ca4a4576)](https://circleci.com/gh/meltwater/node-examplr)
+[![npm](https://img.shields.io/npm/v/@meltwater/examplr.svg)](https://www.npmjs.com/package/@meltwater/examplr)
+[![CircleCI](https://img.shields.io/circleci/project/github/meltwater/node-examplr/master.svg)](https://circleci.com/gh/meltwater/node-examplr)
 
 ## Description
 
