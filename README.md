@@ -28,6 +28,8 @@ $ yarn example adventure
 $ yarn example adventure Jake 28
 ```
 
+[![asciicast](./demo.gif)](https://asciinema.org/a/23ee3BUtdw2Yppg0PkIspPiOf)
+
 ## Installation
 
 Add this as a dependency to your project using [npm] with
