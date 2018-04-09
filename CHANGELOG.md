@@ -5,11 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.5] / 2018-04-09
+
+### Changed
+
+- Open source under the Apache License, Version 2.0.
+
 ## [4.1.4] / 2018-03-29
+
+### Added
+
+- Examples in `examples` folder.
+- Better documentation.
 
 ### Fixed
 
-- Expliclty use `req`, `res`, and `err` serializers
+- Explicitly use `req`, `res`, and `err` serializers
   to suppress pino warning.
 
 ### Changed
