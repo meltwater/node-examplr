@@ -71,6 +71,11 @@ but should work on older Node.js versions which support async / await.
 The code examples presented in this documentation use ES6 module syntax
 (run using `babel-node`), but may be replaced with CommonJS modules
 using `module.exports` and `require`.
+If using CommonJS, you must require this package with
+
+```js
+const createExamples = require('@meltwater/examplr').default
+```
 
 ## Usage
 
