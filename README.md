@@ -130,7 +130,7 @@ running with `npm run example` or `yarn run example`, etc.,
     "example": "babel-node examples",
     "example:watch": "babel-watch --watch examples/local.json examples",
     "example:inspect": "babel-node --inspect examples",
-    "example:inspect:watch": "nodemon node_modules/.bin/babel-node --inspect examples",
+    "example:inspect:watch": "nodemon node_modules/.bin/babel-node --inspect examples"
   }
 }
 ```
