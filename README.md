@@ -48,16 +48,16 @@ $ yarn example adventure Jake 28
 
 ## Installation
 
-Add this as a dependency to your project using [npm] with
+Add this as a development dependency to your project using [npm] with
 
 ```
-$ npm install @meltwater/examplr
+$ npm install --dev @meltwater/examplr
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add @meltwater/examplr
+$ yarn add --save-dev @meltwater/examplr
 ```
 
 [npm]: https://www.npmjs.com/
