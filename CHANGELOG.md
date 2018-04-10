@@ -11,12 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Open source under the Apache License, Version 2.0.
 
-## [4.1.4] / 2018-03-29
-
 ### Added
 
 - Examples in `examples` folder.
 - Better documentation.
+
+## [4.1.4] / 2018-03-29
 
 ### Fixed
 
