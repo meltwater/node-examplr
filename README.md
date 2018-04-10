@@ -10,7 +10,7 @@ Because all packages should have an `examples` folder
 
 Examplr is a lightweight tool for adding examples to your project.
 Write the smallest amount of code possible
-to demonstrate the critical elements of your API:
+to demonstrate the critical elements of your module:
 the configuration, the input, and the output.
 
 Examplr handles configuration options,
@@ -18,7 +18,7 @@ simple arguments, log output, and process execution.
 Examples can be async functions or return promises.
 Errors and rejections are handled and logged correctly.
 
-The examples live with the code and look like
+Here's what an example for getting a user with an API client might look like
 
 ```js
 import createClient from '../lib'
@@ -29,6 +29,14 @@ export default ({apiKey, log}) => async (userId = 'user-id') => {
   return name
 }
 ```
+
+Run with Examplr, some convenient magic happens:
+the API key is automatically passed in as an option,
+either from the environment variable `API_KEY`
+or from a local JSON file (ignored by version control);
+the user id can be passed in as an argument from the command line;
+a Pino logger is created with colorized formatting;
+and the user name is fetched asynchronously and logged.
 
 ### Try it out
 
