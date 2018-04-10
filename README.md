@@ -3,15 +3,32 @@
 [![npm](https://img.shields.io/npm/v/@meltwater/examplr.svg)](https://www.npmjs.com/package/@meltwater/examplr)
 [![CircleCI](https://img.shields.io/circleci/project/github/meltwater/node-examplr/master.svg)](https://circleci.com/gh/meltwater/node-examplr)
 
-## Description
-
-Example runner for node packages:
-because all packages should have an `examples` folder
+Because all packages should have an `examples` folder
 (including this one).
 
-Run async examples from the command line
-with structured logging, custom arguments,
-and options loaded from the environment or a config file.
+## Description
+
+Examplr is a lightweight tool for adding examples to your project.
+Write the smallest amount of code possible
+to demonstrate the critical elements of your API:
+the configuration, the input, and the output.
+
+Examplr handles configuration options,
+simple arguments, log output, and process execution.
+Examples can be async functions or return promises.
+Errors and rejections are handled and logged correctly.
+
+The examples live with the code and look like
+
+```js
+import createClient from '../lib'
+
+export default ({apiKey, log}) => async (userId = 'user-id') => {
+  const client = createClient({apiKey, log})
+  const { name } = await client.getUserById(userId)
+  return name
+}
+```
 
 ### Try it out
 
