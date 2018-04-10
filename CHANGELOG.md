@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.6] / 2018-04-09
+
+### Changed
+
+- README documentation updated.
+
+### Added
+
+- When the log level is debug or higher,
+  the options and arguments will be logged with the start message.
+
 ## [4.1.5] / 2018-04-09
 
 ### Changed
@@ -123,7 +134,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
-[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.1.5...HEAD
+[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.1.6...HEAD
+[4.1.6]: https://github.com/meltwater/node-examplr/compare/v4.1.5...v4.1.6
 [4.1.5]: https://github.com/meltwater/node-examplr/compare/v4.1.4...v4.1.5
 [4.1.4]: https://github.com/meltwater/node-examplr/compare/v4.1.3...v4.1.4
 [4.1.3]: https://github.com/meltwater/node-examplr/compare/v4.1.2...v4.1.3
