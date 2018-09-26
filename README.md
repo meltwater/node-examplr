@@ -267,7 +267,7 @@ Run each command below in a separate terminal window:
 
 ```
 $ yarn run watch
-$ yarn run watch:test
+$ yarn run test:watch
 ```
 
 ## Development and Testing
@@ -404,8 +404,8 @@ Automatically fix most JavaScript formatting errors with
 $ yarn run format
 ```
 
-[gulp]: http://gulpjs.com/
-[JavaScript Standard Style]: http://standardjs.com/
+[gulp]: https://gulpjs.com/
+[JavaScript Standard Style]: https://standardjs.com/
 [JSON Lint]: https://github.com/zaach/jsonlint
 
 #### Tests
@@ -421,7 +421,7 @@ and coverage is reported by [Istanbul].
 Watch and run tests on changes with
 
 ```
-$ yarn run watch:test
+$ yarn run test:watch
 ```
 
 If using [AVA snapshot testing], update snapshots with
