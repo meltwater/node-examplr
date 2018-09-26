@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [4.2.0] / 2018-09-26
+
+### Changed
+
+- Update to Pino v5.4.1.
+- Update to [makenew-node-lib] v5.0.0.
+
 ## [4.1.6] / 2018-04-09
 
 ### Changed
@@ -134,7 +141,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
-[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.1.6...HEAD
+[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.2.0...HEAD
+[4.2.0]: https://github.com/meltwater/node-examplr/compare/v4.1.6...v4.2.0
 [4.1.6]: https://github.com/meltwater/node-examplr/compare/v4.1.5...v4.1.6
 [4.1.5]: https://github.com/meltwater/node-examplr/compare/v4.1.4...v4.1.5
 [4.1.4]: https://github.com/meltwater/node-examplr/compare/v4.1.3...v4.1.4
