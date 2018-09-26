@@ -99,7 +99,8 @@
   "dependencies": {
     "bunyan-formatter": "^1.0.0",
     "change-case": "^3.0.1",
-    "pino": "^4.15.3"
+    "pino": "^5.4.1",
+    "pino-pretty": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
