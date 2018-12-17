@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [4.2.1] / 2018-12-17
+
+### Changed
+
+- Update to AVA v1 (along with other dependencies).
+- Update CircleCI to test Node.js v10 LTS.
+
 ## [4.2.0] / 2018-09-26
 
 ### Changed
@@ -141,7 +148,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
-[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.2.0...HEAD
+[Unreleased]: https://github.com/meltwater/node-examplr/compare/v4.2.1...HEAD
+[4.2.1]: https://github.com/meltwater/node-examplr/compare/v4.2.0...v4.2.1
 [4.2.0]: https://github.com/meltwater/node-examplr/compare/v4.1.6...v4.2.0
 [4.1.6]: https://github.com/meltwater/node-examplr/compare/v4.1.5...v4.1.6
 [4.1.5]: https://github.com/meltwater/node-examplr/compare/v4.1.4...v4.1.5
