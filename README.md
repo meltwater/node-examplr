@@ -322,7 +322,7 @@ The following environment variables must be set on [CircleCI]:
 - `NPM_TEAM`: npm team to grant read-only package access
   (format `org:team`, optional).
 
-These may be set manually or by running the script `./circleci/envvars.sh`.
+These may be set manually or by running the script `./.circleci/envvars.sh`.
 
 [CircleCI]: https://circleci.com/
 
