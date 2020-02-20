@@ -10,6 +10,7 @@ export const examples = {
   adventure
 }
 
+// prettier-ignore
 const envVars = [
   'MIN_LEVEL',
   'LOG_LEVEL',
