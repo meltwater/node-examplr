@@ -107,7 +107,7 @@
   },
   "dependencies": {
     "bunyan-formatter": "^1.0.0",
-    "change-case": "^3.0.1",
+    "change-case": "^4.1.1",
     "pino": "^5.4.1",
     "pino-pretty": "^2.1.0"
   },
