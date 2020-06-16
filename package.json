@@ -108,8 +108,8 @@
   "dependencies": {
     "bunyan-formatter": "^1.0.0",
     "change-case": "^4.1.1",
-    "pino": "^5.4.1",
-    "pino-pretty": "^3.6.0"
+    "pino": "^6.3.2",
+    "pino-pretty": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
