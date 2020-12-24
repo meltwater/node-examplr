@@ -71,20 +71,6 @@ $ yarn add --save-dev @meltwater/examplr
 [npm]: https://www.npmjs.com/
 [Yarn]: https://yarnpkg.com/
 
-## Requirements
-
-Examplr is built for Node.js 8.9.0 or above,
-but should work on older Node.js versions which support async / await.
-
-The code examples presented in this documentation use ES6 module syntax
-(run using `babel-node`), but may be replaced with CommonJS modules
-using `module.exports` and `require`.
-If using CommonJS, you must require this package with
-
-```js
-const createExamples = require('@meltwater/examplr').default
-```
-
 ## Usage
 
 Refer to the [`examples` folder](./examples) for working examples
@@ -99,7 +85,7 @@ Create an entry point for examples,
 
 import path from 'path'
 
-import createExamples from '@meltwater/examplr'
+import { createExamples } from '@meltwater/examplr'
 
 // Normally examples are imported from other files:
 // add this one here for demonstration.

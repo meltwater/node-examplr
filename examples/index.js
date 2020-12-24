@@ -1,8 +1,8 @@
 import path from 'path'
 
 // If using in a real project, replace the line below with
-// import createExamples from '@meltwater/examplr'
-import createExamples from '../lib'
+// import { createExamples } from '@meltwater/examplr'
+import { createExamples } from '../lib'
 
 import adventure from './adventure'
 
