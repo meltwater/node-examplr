@@ -115,7 +115,7 @@ runExample({
 This can now be run with custom arguments with
 
 ```
-$ babel-node ./examples adventure-time Snail
+$ node ./examples adventure-time Snail
 ```
 
 Add any of the following to your project's npm scripts to enable
@@ -124,10 +124,10 @@ running with `npm run example` or `yarn run example`, etc.,
 ```json
 {
   "scripts": {
-    "example": "babel-node examples",
-    "example:watch": "babel-watch --watch examples/local.json examples",
-    "example:inspect": "babel-node --inspect examples",
-    "example:inspect:watch": "nodemon node_modules/.bin/babel-node --inspect examples"
+    "example": "node examples",
+    "example:watch": "nodemon examples",
+    "example:inspect": "node --inspect examples",
+    "example:inspect:watch": "nodemon --inspect examples",
   }
 }
 ```
