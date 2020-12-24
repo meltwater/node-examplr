@@ -2,9 +2,9 @@ import path from 'path'
 
 // If using in a real project, replace the line below with
 // import { createExamples } from '@meltwater/examplr'
-import { createExamples } from '../lib'
+import { createExamples } from '../index.js'
 
-import adventure from './adventure'
+import adventure from './adventure.js'
 
 export const examples = {
   adventure
