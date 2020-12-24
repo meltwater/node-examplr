@@ -22,14 +22,12 @@ const defaultOptions = {
   minLevel: 2
 }
 
-if (require.main === module) {
-  const { runExample } = createExamples({
-    examples,
-    envVars,
-    defaultOptions
-  })
+const { runExample } = createExamples({
+  examples,
+  envVars,
+  defaultOptions
+})
 
-  runExample({
-    local: path.resolve(__dirname, 'local.json')
-  })
-}
+runExample({
+  local: path.resolve('examples', 'local.json')
+})

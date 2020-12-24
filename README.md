@@ -107,11 +107,9 @@ const { runExample } = createExamples({
   }
 })
 
-if (require.main === module) {
-  runExample({
-    local: path.resolve(__dirname, 'local.json')
-  })
-}
+runExample({
+  local: path.resolve('examples', 'local.json')
+})
 ```
 
 This can now be run with custom arguments with
