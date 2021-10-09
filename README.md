@@ -23,8 +23,8 @@ Here's what an example for getting a user with an API client might look like
 ```js
 import createClient from '../lib'
 
-export default ({apiKey, log}) => async (userId = 'user-id') => {
-  const client = createClient({apiKey, log})
+export default ({apiKey, reqId, log}) => async (userId = 'user-id') => {
+  const client = createClient({apiKey, reqId, log})
   const { name } = await client.getUserById(userId)
   return name
 }

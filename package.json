@@ -124,7 +124,8 @@
     "bunyan-formatter": "^1.0.0",
     "change-case": "^4.1.1",
     "pino": "^6.3.2",
-    "pino-pretty": "^4.0.0"
+    "pino-pretty": "^4.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
