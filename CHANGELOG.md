@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [7.0.0] / 2022-02-14
+
+### Changed
+
+- Update to pino v7.
+- Update to pino-pretty v7.
+
 ## [6.1.0] / 2021-10-09
 
 ### Added
@@ -190,7 +197,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 [bunyan-formatter]: https://www.npmjs.com/package/bunyan-formatter
 [Pino]: https://github.com/pinojs/pino
 
-[Unreleased]: https://github.com/meltwater/node-examplr/compare/v6.1.0...HEAD
+[Unreleased]: https://github.com/meltwater/node-examplr/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/meltwater/node-examplr/compare/v6.1.0...v7.0.0
 [6.1.0]: https://github.com/meltwater/node-examplr/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/meltwater/node-examplr/compare/v5.0.1...v6.0.0
 [5.0.1]: https://github.com/meltwater/node-examplr/compare/v5.0.0...v5.0.1
