@@ -1,6 +1,6 @@
 {
   "name": "@meltwater/examplr",
-  "version": "7.0.0-beta.0",
+  "version": "7.0.0-beta.1",
   "description": "Example runner for Node.js packages.",
   "type": "module",
   "main": "dist/index.cjs",
